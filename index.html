@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Escaneás sin pensar?</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #102653, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 15px 0;
+    }
+
+    header p {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .etiqueta {
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 6px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      margin-bottom: 22px;
+      box-shadow: 0 5px 18px #0000000d;
+    }
+
+    .revelacion {
+      border-left: 6px solid #16a34a;
+    }
+
+    h2 {
+      color: #1d4ed8;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .tarjeta {
+      background: white;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 5px 18px #0000000d;
+    }
+
+    .icono {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    ul, ol {
+      padding-left: 22px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .aviso {
+      background: #fff7df;
+      border-left: 6px solid #eab308;
+    }
+
+    .pregunta {
+      padding: 12px 0;
+    }
+
+    .pregunta label {
+      display: block;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    #resultado {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #102653;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <span class="etiqueta">Proyecto de Seguridad Informática</span>
+    <h1>¿Escaneás sin pensar?</h1>
+    <p>
+      Antes de abrir un código QR, pensá.
+      Podrías estar frente a una estafa.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="revelacion">
+      <h2>¡Esto fue un experimento educativo!</h2>
+
+      <p>
+        Acabás de escanear un código QR de nuestro proyecto
+        de concientización sobre el <strong>quishing</strong>.
+        El objetivo es enseñarte a reconocer los peligros
+        de los códigos QR desconocidos.
+      </p>
+
+      <p>
+        <strong>No te pedimos datos personales ni contraseñas.</strong>
+        Esta página no tiene formularios para recolectar información
+        ni realiza descargas.
+      </p>
+    </section>
+
+    <div class="tarjetas">
+
+      <article class="tarjeta">
+        <div class="icono">🔎</div>
+        <h2>¿Qué es el quishing?</h2>
+        <p>
+          Es una forma de phishing que utiliza códigos QR
+          para engañar a las personas y llevarlas a páginas
+          falsas o peligrosas.
+        </p>
+      </article>
+
+      <article class="tarjeta aviso">
+        <div class="icono">⚠️</div>
+        <h2>¿Qué puede pasar?</h2>
+        <ul>
+          <li>Robo de contraseñas.</li>
+          <li>Estafas y pagos fraudulentos.</li>
+          <li>Robo de información personal.</li>
+          <li>Descarga de aplicaciones maliciosas.</li>
+        </ul>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🛡️</div>
+        <h2>¿Cómo protegerte?</h2>
+        <ul>
+          <li>Revisá el enlace antes de abrirlo.</li>
+          <li>Desconfiá de premios demasiado buenos.</li>
+          <li>No ingreses contraseñas en páginas dudosas.</li>
+          <li>No instales aplicaciones desconocidas.</li>
+          <li>Buscá el sitio oficial por tu cuenta.</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <section>
+      <h2>🧠 Poné a prueba tus conocimientos</h2>
+      <p>
+        Encontrás un QR que promete un premio, pero no sabés
+        quién lo colocó. ¿Qué deberías hacer?
+      </p>
+
+      <form id="formulario">
+        <div class="pregunta">
+          <label>
+            <input type="radio" name="respuesta" value="a" required>
+            Escanearlo rápido para no perder el premio.
+          </label>
+
+          <label>
+            <input type="radio" name="respuesta" value="b">
+            Revisar el enlace y desconfiar si parece sospechoso.
+          </label>
+
+          <label>
+            <input type="radio" name="respuesta" value="c">
+            Ingresar mi contraseña para comprobar si es real.
+          </label>
+        </div>
+
+        <button type="submit">Comprobar respuesta</button>
+        <p id="resultado" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section>
+      <h2>¿Qué hacer si abriste un QR sospechoso?</h2>
+      <ol>
+        <li>Cerrá la página y no ingreses información.</li>
+        <li>Si escribiste una contraseña, cambiala desde el sitio oficial.</li>
+        <li>Avisá a un adulto o docente de confianza.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Sobre nuestro proyecto</h2>
+      <p>
+        Este proyecto busca concientizar a los alumnos sobre
+        los riesgos de los códigos QR maliciosos.
+      </p>
+
+      <p><strong>Institución:</strong>
+        Instituto Técnico Nuestra Señora de Itatí</p>
+
+      <p><strong>Equipo:</strong> Escriban aquí sus nombres.</p>
+
+      <p><strong>Resultados:</strong>
+        Los escaneos se registrarán de forma anónima,
+        mediante un método autorizado por el docente.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Seguridad Informática · Muestra Anual 2026</p>
+    <p>¡Pensá antes de escanear!</p>
+  </footer>
+
+  <script>
+    const formulario = document.getElementById("formulario");
+    const resultado = document.getElementById("resultado");
+
+    formulario.addEventListener("submit", function(evento) {
+      evento.preventDefault();
+
+      const respuesta = document.querySelector(
+        'input[name="respuesta"]:checked'
+      ).value;
+
+      if (respuesta === "b") {
+        resultado.textContent =
+          "¡Correcto! Revisar el enlace ayuda a protegerte.";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent =
+          "Incorrecto. Revisá el enlace y nunca ingreses datos en páginas dudosas.";
+        resultado.style.color = "red";
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+<!-- VIDEO EDUCATIVO -->
+<section class="video-educativo">
+  <h2>🎬 Video para aprender más</h2>
+  <p>
+    Mirá este video y aprendé más sobre la seguridad en internet.
+  </p>
+
+  <div class="contenedor-video">
+    <iframe
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      title="Video educativo"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <p>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+       target="_blank" rel="noopener noreferrer">
+      Ver el video en YouTube
+    </a>
+  </p>
+</section>
+
+<style>
+  .video-educativo {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+    background: #f0f7ff;
+    border-radius: 16px;
+    color: #172554;
+  }
+
+  .contenedor-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .contenedor-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .video-educativo a {
+    color: #1d4ed8;
+    font-weight: bold;
+  }
+</style>
+</body>
